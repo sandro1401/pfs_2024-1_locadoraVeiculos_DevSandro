@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locacaos",
+  "info": {
+    "singularName": "locacao",
+    "pluralName": "locacaos",
+    "displayName": "Locacao"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "locacaos"
+    },
+    "veiculo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::veiculo.veiculo",
+      "inversedBy": "locacaos"
+    },
+    "data_aluguel": {
+      "type": "date",
+      "required": true
+    },
+    "data_devolucao": {
+      "type": "date",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "Cliente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "text",
+      "required": true
+    },
+    "cpf": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    },
+    "locacaos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::locacao.locacao",
+      "mappedBy": "cliente"
+    }
+  }
+}
