@@ -1,20 +1,194 @@
 {
-    "client": "Thunder Client",
+    "clientName": "Thunder Client",
     "collectionName": "Locadora_Veiculos",
-    "dateExported": "2024-04-25T01:02:16.587Z",
-    "version": "1.1",
+    "collectionId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+    "dateExported": "2024-05-28T14:40:08.660Z",
+    "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "3450a099-3cf4-48cc-b070-493bc2dae3d6",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
+            "_id": "f1c91ba8-f1ee-4c63-8f7d-2ae067d7b841",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "GET clientes",
+            "url": "http://localhost:1337/api/clientes",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-28T14:10:33.270Z",
+            "modified": "2024-05-28T14:10:33.270Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d7c7c4e4-79df-43ed-bf9d-d291dcb01bb2",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "POST cliente",
+            "url": "http://localhost:1337/api/clientes",
+            "method": "POST",
+            "sortNum": 27500,
+            "created": "2024-05-28T14:10:33.273Z",
+            "modified": "2024-05-28T14:11:03.110Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\": \n    {\n      \"nome\": \"SandroT\",\n      \"cpf\": 3456785\n      }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a8a89d92-feb9-49ce-a9b3-5dfb1e481b9c",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "PUT cliente",
+            "url": "http://localhost:1337/api/clientes/3",
+            "method": "PUT",
+            "sortNum": 31250,
+            "created": "2024-05-28T14:18:09.885Z",
+            "modified": "2024-05-28T14:21:03.901Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\": \n    {\n      \"nome\": \"SandroJST\",\n      \"cpf\": 23456785\n      }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2c0513e6-b9c8-4241-b2c5-a65db5cde01a",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "DELETE cliente",
+            "url": "http://localhost:1337/api/clientes/3",
+            "method": "DELETE",
+            "sortNum": 35000,
+            "created": "2024-05-28T14:21:50.128Z",
+            "modified": "2024-05-28T14:36:03.532Z",
+            "headers": []
+        },
+        {
+            "_id": "f789ba92-c288-4839-a054-859d1604609f",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "POST marca",
+            "url": "http://localhost:1337/api/marcas",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-05-28T14:10:33.275Z",
+            "modified": "2024-05-28T14:10:33.275Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\": {\n    \"nome\": \"Renault\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "916fea08-5895-4724-9fe6-b17364c611db",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "GET marca",
+            "url": "http://localhost:1337/api/marcas?populate=*",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-05-28T14:10:33.276Z",
+            "modified": "2024-05-28T14:10:33.276Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "populate",
+                    "value": "*",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "f7228316-60e3-49b8-9099-be59c1bb9f7e",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "POST modelo",
+            "url": "http://localhost:1337/api/modelos",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-05-28T14:10:33.277Z",
+            "modified": "2024-05-28T14:10:33.277Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\": {\n    \"nome\": \"Sandero\",\n      \"marca\": {\"id\": 4}\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5bf90368-430a-40e1-b485-e371c4a1ad5a",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "GET Locacao",
+            "url": "http://localhost:1337/api/locacaos?populate=*",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-05-28T14:17:02.763Z",
+            "modified": "2024-05-28T14:17:02.763Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "populate",
+                    "value": "*",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "a0b64b33-f920-42a6-ac30-cbc20c6d09ae",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "POST locacao",
+            "url": "http://localhost:1337/api/locacaos",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-05-28T14:10:33.279Z",
+            "modified": "2024-05-28T14:10:33.279Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\":{\n    \"data_aluguel\": \"2024-04-24\",\n      \"cliente\": {\"id\": 1},\n      \"veiculo\": {\"id\": 2}\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "33652ef8-915d-4cd6-bd88-83a7d6559832",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "PUT locacao",
+            "url": "http://localhost:1337/api/locacaos/1",
+            "method": "PUT",
+            "sortNum": 116250,
+            "created": "2024-05-28T14:38:01.906Z",
+            "modified": "2024-05-28T14:39:04.552Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\":{\n    \"data_aluguel\": \"2024-04-24\",\n      \"cliente\": {\"id\": 2},\n      \"veiculo\": {\"id\": 2}\n  }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c736fbc2-db1d-443d-ac78-419f32ee78b8",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
             "containerId": "",
             "name": "GET veiculo+modelo+marca+imagem",
             "url": "http://localhost:1337/api/veiculos?populate[0]=modelo.marca&populate[1]=modelo&populate[2]=imagem",
             "method": "GET",
-            "sortNum": 10000,
-            "created": "2024-04-25T00:36:47.209Z",
-            "modified": "2024-04-25T00:38:10.185Z",
+            "sortNum": 122500,
+            "created": "2024-05-28T14:10:33.269Z",
+            "modified": "2024-05-28T14:10:33.269Z",
             "headers": [],
             "params": [
                 {
@@ -36,162 +210,51 @@
             "tests": []
         },
         {
-            "_id": "b7d518e1-675c-4861-aff3-114adb72c753",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
+            "_id": "af0fc652-339a-40fa-a4b6-a6c2068ebf9b",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
             "containerId": "",
-            "name": "GET clientes",
-            "url": "http://localhost:1337/api/clientes",
-            "method": "GET",
-            "sortNum": 20000,
-            "created": "2024-04-25T00:37:52.552Z",
-            "modified": "2024-04-25T00:38:00.547Z",
-            "headers": [],
-            "params": [],
-            "tests": []
-        },
-        {
-            "_id": "687032d5-b1aa-4674-b843-7bded9681131",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
-            "containerId": "",
-            "name": "POST cliente",
-            "url": "",
-            "method": "GET",
-            "sortNum": 30000,
-            "created": "2024-04-25T00:38:26.488Z",
-            "modified": "2024-04-25T00:38:26.488Z",
-            "headers": []
-        },
-        {
-            "_id": "5c51adba-0ae6-45e7-aab5-45d56a8cfe67",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
-            "containerId": "",
-            "name": "POST cliente",
-            "url": "",
-            "method": "GET",
-            "sortNum": 40000,
-            "created": "2024-04-25T00:38:33.784Z",
-            "modified": "2024-04-25T00:38:33.784Z",
-            "headers": []
-        },
-        {
-            "_id": "84393cea-fbde-4e51-b19e-a7d2336b9755",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
-            "containerId": "",
-            "name": "POST cliente",
-            "url": "http://localhost:1337/api/clientes",
+            "name": "POST veiculo",
+            "url": "http://localhost:1337/api/veiculos",
             "method": "POST",
-            "sortNum": 50000,
-            "created": "2024-04-25T00:38:40.783Z",
-            "modified": "2024-04-25T00:40:37.057Z",
+            "sortNum": 128750,
+            "created": "2024-05-28T14:28:04.697Z",
+            "modified": "2024-05-28T14:31:45.957Z",
             "headers": [],
-            "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"data\": \n    {\n      \"nome\": \"Sandro\",\n      \"cpf\": 456785\n      }\n}",
+                "raw": "{\n  \"data\": {\n    \"ano_fabricacao\": 2024,\n    \"chassi\": 89898989898,\n      \"modelo\": {\"id\": 2}\n  }\n}",
                 "form": []
-            },
-            "tests": []
+            }
         },
         {
-            "_id": "ef568ebb-437e-40e1-81f8-350c650e555f",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
+            "_id": "0bb18403-e2fa-4fcf-8f29-e715a72ccb77",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
             "containerId": "",
-            "name": "POST marca",
-            "url": "",
-            "method": "GET",
-            "sortNum": 60000,
-            "created": "2024-04-25T00:40:59.374Z",
-            "modified": "2024-04-25T00:40:59.374Z",
+            "name": "PUT veiculos",
+            "url": "http://localhost:1337/api/veiculos/3",
+            "method": "PUT",
+            "sortNum": 135000,
+            "created": "2024-05-28T14:32:30.181Z",
+            "modified": "2024-05-28T14:34:08.033Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\": {\n    \"ano_fabricacao\": 2023,\n    \"chassi\": 89898989898,\n      \"modelo\": {\"id\": 2}\n  }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5563c822-c0d2-478b-b13d-8a52a0495973",
+            "colId": "5e837d1d-44d0-43fb-98a2-d1578396409c",
+            "containerId": "",
+            "name": "DELETE veiculos",
+            "url": "http://localhost:1337/api/veiculos/3",
+            "method": "DELETE",
+            "sortNum": 145000,
+            "created": "2024-05-28T14:35:34.995Z",
+            "modified": "2024-05-28T14:35:46.499Z",
             "headers": []
-        },
-        {
-            "_id": "95840945-1c03-47ac-96ff-2d9920d1095e",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
-            "containerId": "",
-            "name": "POST marca",
-            "url": "http://localhost:1337/api/marcas",
-            "method": "POST",
-            "sortNum": 70000,
-            "created": "2024-04-25T00:41:05.127Z",
-            "modified": "2024-04-25T00:41:59.096Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"data\": {\n    \"nome\": \"Renault\"\n  }\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "12084cc9-6a67-41cc-b0a1-7b205b0c0dba",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
-            "containerId": "",
-            "name": "GET marca",
-            "url": "http://localhost:1337/api/marcas?populate=*",
-            "method": "GET",
-            "sortNum": 80000,
-            "created": "2024-04-25T00:42:30.831Z",
-            "modified": "2024-04-25T00:42:53.381Z",
-            "headers": [],
-            "params": [
-                {
-                    "name": "populate",
-                    "value": "*",
-                    "isPath": false
-                }
-            ],
-            "tests": []
-        },
-        {
-            "_id": "2563ed4b-7947-4940-bdb7-95a153a3bb3a",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
-            "containerId": "",
-            "name": "POST modelo",
-            "url": "http://localhost:1337/api/modelos",
-            "method": "POST",
-            "sortNum": 90000,
-            "created": "2024-04-25T00:43:28.072Z",
-            "modified": "2024-04-25T00:53:04.820Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"data\": {\n    \"nome\": \"Sandero\",\n      \"marca\": {\"id\": 4}\n  }\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "8bb3f487-4700-4a3b-b418-a7d6606700b7",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
-            "containerId": "",
-            "name": "POST locacao",
-            "url": "",
-            "method": "GET",
-            "sortNum": 100000,
-            "created": "2024-04-25T00:54:28.248Z",
-            "modified": "2024-04-25T00:54:28.248Z",
-            "headers": []
-        },
-        {
-            "_id": "5538c6ad-d5dc-464e-a8ad-668f1ab807ff",
-            "colId": "edcd95ac-1686-4345-b2d2-b53939d468a2",
-            "containerId": "",
-            "name": "POST locacao",
-            "url": "http://localhost:1337/api/locacaos",
-            "method": "POST",
-            "sortNum": 110000,
-            "created": "2024-04-25T00:54:33.270Z",
-            "modified": "2024-04-25T01:00:05.276Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"data\":{\n    \"data_aluguel\": \"2024-04-24\",\n      \"cliente\": {\"id\": 1},\n      \"veiculo\": {\"id\": 2}\n  }\n}",
-                "form": []
-            },
-            "tests": []
         }
-    ]
+    ],
+    "ref": "EBhS73-NXHH_3PXE3oo16fusADYZVNu3bpQY_rFt6MO8LGWYgYZ57i5m-ue9ucOFSNCAdxQZj4nRW2JQNV2IFg"
 }
